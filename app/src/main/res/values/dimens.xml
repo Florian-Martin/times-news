@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_nav_view_height">56dp</dimen>
+    <dimen name="margin_half">8dp</dimen>
+    <dimen name="cardview_rv_item_radius">16dp</dimen>
+    <dimen name="padding_quarter">4dp</dimen>
+    <dimen name="margin_quarter">4dp</dimen>
+    <dimen name="byline">10sp</dimen>
+    <dimen name="padding">16dp</dimen>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="heading">20sp</dimen>
+</resources>

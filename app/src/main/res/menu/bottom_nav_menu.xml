@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_newswire"
+        android:icon="@drawable/ic_baseline_newswire"
+        android:title="@string/title_newswire" />
+
+    <item
+        android:id="@+id/navigation_categories"
+        android:icon="@drawable/ic_baseline_category_24"
+        android:title="@string/title_categories" />
+
+    <item
+        android:id="@+id/navigation_top_stories"
+        android:icon="@drawable/ic_baseline_local_fire_department_24"
+        android:title="@string/title_top_stories" />
+
+    <item
+        android:id="@+id/navigation_bookmarks"
+        android:icon="@drawable/ic_baseline_bookmark_24"
+        android:title="@string/title_bookmarks" />
+</menu>

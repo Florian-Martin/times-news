@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_newswire">
+
+    <fragment
+        android:id="@+id/navigation_newswire"
+        android:name="fr.martinflorian.timesnews.ui.newswire.NewswireFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_newswire">
+
+        <action
+            android:id="@+id/action_navigation_newswire_to_navigation_articleDetail"
+            app:destination="@id/navigation_articleDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_top_stories"
+        android:name="fr.martinflorian.timesnews.ui.topstories.TopStoriesFragment"
+        android:label="@string/title_top_stories"
+        tools:layout="@layout/fragment_top_stories">
+
+        <action
+            android:id="@+id/action_navigation_top_stories_to_navigation_articleDetail"
+            app:destination="@id/navigation_articleDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_articleDetail"
+        android:name="fr.martinflorian.timesnews.ui.ArticleDetailFragment"
+        android:label="@string/title_article_detail"
+        tools:layout="@layout/fragment_article_detail">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="calling_fragment"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="fr.martinflorian.timesnews.ui.categories.CategorizedArticlesFragment"
+        android:label="@string/title_categories"
+        tools:layout="@layout/fragment_categorized_articles">
+        <action
+            android:id="@+id/action_categoriesFragment_to_articleDetailFragment"
+            app:destination="@id/navigation_articleDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_bookmarks"
+        android:name="fr.martinflorian.timesnews.ui.bookmarks.BookmarksFragment"
+        android:label="@string/title_bookmarks"
+        tools:layout="@layout/fragment_bookmarks">
+
+        <action
+            android:id="@+id/action_navigation_bookmarks_to_navigation_articleDetail"
+            app:destination="@id/navigation_articleDetail" />
+    </fragment>
+</navigation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_article_category_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_half"
+    android:background="@drawable/default_category_background"
+    android:padding="@dimen/padding"
+    android:textColor="?android:textColorPrimary"
+    tools:text="@string/lorem_ipsum_title">
+
+
+</TextView>

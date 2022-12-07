@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Times News</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="article_image">Article image</string>
+    <string name="category">Category</string>
+    <string name="lorem_ipsum_title">Lorem ipsum</string>
+    <string name="lorem_ipsum_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="by">By</string>
+    <string name="title_top_stories">Top stories</string>
+    <string name="title_categories">Categories</string>
+    <string name="article_detail_title_hint">How to download your twitter archive</string>
+    <string name="article_detail_snippet_hint">Those worried about the service’s longevity can preserve their tweets, media and direct messages.</string>
+    <string name="article_detail_authors">By %s</string>
+    <string name="article_detail_publication_date">Published on %s</string>
+    <string name="article_detail_lead_paragraph">After a mass exodus of “critical” workers at Twitter, raising fears that the site might not continue to operate reliably, some users might be thinking it’s a good time to preserve years of tweets and other data.</string>
+    <string name="article_detail_redirection">Continue reading on New York Times website : %s</string>
+    <string name="remove_from_bookmarks">Remove from bookmarks</string>
+    <string name="add_to_bookmarks">Add to bookmarks</string>
+    <string name="title_article_detail">Detail</string>
+    <string name="title_bookmarks">Bookmarks</string>
+    <string name="title_newswire">Newswire</string>
+
 </resources>

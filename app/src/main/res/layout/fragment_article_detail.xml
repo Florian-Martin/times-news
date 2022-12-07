@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/bottom_nav_view_height">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.detail.ArticleDetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/article_detail_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/article_detail_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_half"
+                android:layout_marginBottom="@dimen/margin"
+                android:background="@drawable/article_item_category_background"
+                android:paddingHorizontal="@dimen/padding_quarter"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/category" />
+
+            <TextView
+                android:id="@+id/article_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="@dimen/heading"
+                app:layout_constraintTop_toBottomOf="@id/article_detail_category"
+                tools:text="@string/article_detail_title_hint" />
+
+            <TextView
+                android:id="@+id/article_detail_snippet"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.8"
+                android:textColor="?android:textColorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/article_detail_title"
+                tools:text="@string/article_detail_snippet_hint" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/article_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="@dimen/margin"
+            android:contentDescription="@string/article_image"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/article_detail_header"
+            tools:src="@tools:sample/backgrounds/scenic[1]" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/article_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin"
+            android:orientation="vertical"
+            android:padding="@dimen/padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/article_detail_image">
+
+            <TextView
+                android:id="@+id/article_detail_authors_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="@string/article_detail_authors"
+                android:textColor="?android:textColorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/article_detail_publication_date_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:textColor="?android:textColorPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/article_detail_authors_tv"
+                tools:text="@string/article_detail_publication_date" />
+
+            <TextView
+                android:id="@+id/article_detail_lead_paragraph_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:textColor="?android:textColorPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/article_detail_publication_date_tv"
+                tools:text="@string/article_detail_lead_paragraph" />
+
+            <TextView
+                android:id="@+id/article_detail_redirection_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:autoLink="web"
+                android:text="@string/article_detail_redirection"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/article_detail_lead_paragraph_tv" />
+
+            <Button
+                android:id="@+id/article_detail_remove_from_bookmark_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:drawableLeft="@drawable/ic_baseline_bookmark_white_24"
+                android:drawableTint="@color/white"
+                android:text="@string/remove_from_bookmarks"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/article_detail_redirection_tv" />
+
+            <Button
+                android:id="@+id/article_detail_add_to_bookmark_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:drawableLeft="@drawable/ic_baseline_bookmark_white_24"
+                android:drawableTint="@color/white"
+                android:text="@string/add_to_bookmarks"
+                app:layout_constraintTop_toBottomOf="@id/article_detail_redirection_tv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
