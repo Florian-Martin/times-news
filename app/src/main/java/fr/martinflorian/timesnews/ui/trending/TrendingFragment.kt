@@ -5,14 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import fr.martinflorian.timesnews.databinding.FragmentTopStoriesBinding
+import fr.martinflorian.timesnews.databinding.FragmentTrendingBinding
 
 
 class TrendingFragment : Fragment() {
     /**************************************
      * PROPERTIES
      *************************************/
-    private var _binding: FragmentTopStoriesBinding? = null
+    private var _binding: FragmentTrendingBinding? = null
     private val binding get() = _binding!!
 
 
@@ -23,7 +23,7 @@ class TrendingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTopStoriesBinding.inflate(inflater, container, false)
+        _binding = FragmentTrendingBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

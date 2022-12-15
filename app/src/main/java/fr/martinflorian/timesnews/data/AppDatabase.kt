@@ -8,7 +8,7 @@ import fr.martinflorian.timesnews.data.local.ArticlesDao
 import fr.martinflorian.timesnews.model.Article
 
 @Database(
-    entities = [Article.Article::class],
+    entities = [Article::class],
     version = 1,
     exportSchema = false
 )

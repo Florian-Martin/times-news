@@ -2,14 +2,14 @@ package fr.martinflorian.timesnews.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import fr.martinflorian.timesnews.model.Article
+import fr.martinflorian.timesnews.model.*
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface ArticlesDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(list: List<Article.Article>)
+    suspend fun insert(list: List<Article>)
 
     @Update
     suspend fun update(article: Article)
