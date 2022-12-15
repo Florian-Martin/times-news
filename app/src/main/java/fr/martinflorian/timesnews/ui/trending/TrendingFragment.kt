@@ -1,18 +1,18 @@
-package fr.martinflorian.timesnews.ui.newswire
+package fr.martinflorian.timesnews.ui.trending
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import fr.martinflorian.timesnews.databinding.FragmentNewswireBinding
+import fr.martinflorian.timesnews.databinding.FragmentTopStoriesBinding
 
 
-class NewswireFragment : Fragment() {
+class TrendingFragment : Fragment() {
     /**************************************
      * PROPERTIES
      *************************************/
-    private var _binding: FragmentNewswireBinding? = null
+    private var _binding: FragmentTopStoriesBinding? = null
     private val binding get() = _binding!!
 
 
@@ -23,7 +23,7 @@ class NewswireFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentNewswireBinding.inflate(inflater, container, false)
+        _binding = FragmentTopStoriesBinding.inflate(inflater, container, false)
         return binding.root
     }
 }

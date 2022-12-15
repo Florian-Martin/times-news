@@ -12,9 +12,9 @@
         android:title="@string/title_categories" />
 
     <item
-        android:id="@+id/navigation_top_stories"
+        android:id="@+id/navigation_trending"
         android:icon="@drawable/ic_baseline_local_fire_department_24"
-        android:title="@string/title_top_stories" />
+        android:title="@string/title_trending" />
 
     <item
         android:id="@+id/navigation_bookmarks"

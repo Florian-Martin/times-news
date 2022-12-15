@@ -16,13 +16,13 @@
             app:destination="@id/navigation_articleDetail" />
     </fragment>
     <fragment
-        android:id="@+id/navigation_top_stories"
-        android:name="fr.martinflorian.timesnews.ui.topstories.TopStoriesFragment"
-        android:label="@string/title_top_stories"
-        tools:layout="@layout/fragment_top_stories">
+        android:id="@+id/navigation_trending"
+        android:name="fr.martinflorian.timesnews.ui.trending.TrendingFragment"
+        android:label="@string/title_trending"
+        tools:layout="@layout/fragment_trending">
 
         <action
-            android:id="@+id/action_navigation_top_stories_to_navigation_articleDetail"
+            android:id="@+id/action_navigation_trending_to_navigation_articleDetail"
             app:destination="@id/navigation_articleDetail" />
     </fragment>
     <fragment
