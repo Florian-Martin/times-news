@@ -34,7 +34,7 @@ interface NYTimesApiService {
      * Endpoint to get Trending articles
      */
     @GET("topstories/v2/home.json")
-    suspend fun getTopStories(
+    suspend fun getTrending(
         @QueryMap(encoded = true) params: Map<String, String>
     ): Response<TopStoriesArticlesApiData>
 
