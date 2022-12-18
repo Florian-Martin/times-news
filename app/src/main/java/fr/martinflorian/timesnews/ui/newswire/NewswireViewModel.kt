@@ -25,6 +25,7 @@ class NewswireViewModel(application: Application) : ViewModel() {
 
     private val articleType = application.resources.getString(R.string.title_newswire)
 
+    // HTTP params for NYT API
     private val params = mapOf(
         "api-key" to BuildConfig.API_KEY
     )
@@ -36,6 +37,10 @@ class NewswireViewModel(application: Application) : ViewModel() {
     /**************************************
      * FUNCTIONS
      *************************************/
+
+    /**
+     * Get articles from [ArticlesRepository]
+     */
     fun getArticles() {
         viewModelScope.launch {
             repository.getArticlesFromType(params, articleType)
