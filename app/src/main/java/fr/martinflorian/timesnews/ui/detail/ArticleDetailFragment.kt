@@ -1,11 +1,12 @@
 package fr.martinflorian.timesnews.ui.detail
 
+import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.core.net.toUri
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import coil.load
@@ -15,7 +16,7 @@ import fr.martinflorian.timesnews.model.Article
 import fr.martinflorian.timesnews.utils.showView
 
 
-class ArticleDetailFragment : Fragment() {
+class ArticleDetailFragment : Fragment(), MenuProvider {
 
     /**************************************
      * PROPERTIES
@@ -42,6 +43,7 @@ class ArticleDetailFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        requireActivity().addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
         _binding = FragmentArticleDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -109,5 +111,32 @@ class ArticleDetailFragment : Fragment() {
             showView(articleDetailAddToBookmarkButton, !isBookmarked)
             showView(articleDetailRemoveFromBookmarkButton, isBookmarked)
         }
+    }
+
+    override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+        menuInflater.inflate(R.menu.appbar_menu, menu)
+    }
+
+    override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+        when (menuItem.itemId) {
+            R.id.share_article -> shareArticle()
+        }
+        return false
+    }
+
+    private fun shareArticle() {
+        val snippet = viewModel.article.value?.snippet
+        val title = viewModel.article.value?.title
+        val authors = viewModel.article.value?.authors
+        val webUrl = viewModel.article.value?.webUrl
+        val pubDate = viewModel.article.value?.publicationDate
+        val message = getString(R.string.share_message, title, snippet, authors, pubDate, webUrl)
+        val sendIntent: Intent = Intent().apply {
+            action = Intent.ACTION_SEND_MULTIPLE
+            putExtra(Intent.EXTRA_TEXT, message)
+            putExtra(Intent.EXTRA_TITLE, title)
+            type = "text/plain"
+        }
+        startActivity(Intent.createChooser(sendIntent, null))
     }
 }
