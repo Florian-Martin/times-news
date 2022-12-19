@@ -7,7 +7,7 @@ import fr.martinflorian.timesnews.data.repository.ArticlesRepository
 import fr.martinflorian.timesnews.model.Article
 import kotlinx.coroutines.launch
 
-class ArticleDetailViewModel(private val application: Application) : ViewModel() {
+class ArticleDetailViewModel(application: Application) : ViewModel() {
 
     /**************************************
      * PROPERTIES
@@ -25,6 +25,29 @@ class ArticleDetailViewModel(private val application: Application) : ViewModel()
     fun getArticleById(id: Int) {
         viewModelScope.launch {
             _article.value = repository.getArticleById(id)
+        }
+    }
+
+    /**
+     * Updates Entity isBookmarked status depending on isBookmarked parameter value
+     * 1 = [Article] bookmarked
+     * 0 = [Article] unbookmarked
+     *
+     * @param isBookmarked: Whether the [Article] has to be added to or removed from bookmarks
+     */
+    fun updateBookmarkStatus(isBookmarked: Boolean) {
+        if (isBookmarked) addToBookmarks() else removeFromBookmarks()
+    }
+
+    private fun addToBookmarks() {
+        viewModelScope.launch {
+            article.value?.let { repository.updateArticle(it, true) }
+        }
+    }
+
+    private fun removeFromBookmarks() {
+        viewModelScope.launch {
+            article.value?.let { repository.updateArticle(it, false) }
         }
     }
 

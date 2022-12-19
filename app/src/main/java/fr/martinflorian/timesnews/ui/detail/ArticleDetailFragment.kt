@@ -13,6 +13,7 @@ import coil.load
 import fr.martinflorian.timesnews.R
 import fr.martinflorian.timesnews.databinding.FragmentArticleDetailBinding
 import fr.martinflorian.timesnews.model.Article
+import fr.martinflorian.timesnews.utils.showToast
 import fr.martinflorian.timesnews.utils.showView
 
 
@@ -98,10 +99,20 @@ class ArticleDetailFragment : Fragment(), MenuProvider {
                 articleDetailLeadParagraphTv.text = article?.leadParagraph
             }
 
-            articleDetailAddToBookmarkButton.setOnClickListener {}
-            articleDetailRemoveFromBookmarkButton.setOnClickListener {}
+            articleDetailAddToBookmarkButton.setOnClickListener { updateBookmarkStatus(true) }
+            articleDetailRemoveFromBookmarkButton.setOnClickListener { updateBookmarkStatus(false) }
         }
     }
+
+    private fun updateBookmarkStatus(isBookmarked: Boolean) {
+        viewModel.updateBookmarkStatus(isBookmarked)
+        toggleBookmarkButtons(isBookmarked)
+        val message =
+            if (isBookmarked) getString(R.string.bookmark_added)
+            else getString(R.string.bookmark_removed)
+        showToast(requireContext(), message)
+    }
+
 
     /**
      * Shows button to add to or remove from bookmarks the currently displayed article

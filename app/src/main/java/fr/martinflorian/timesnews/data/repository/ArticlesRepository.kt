@@ -91,10 +91,20 @@ class ArticlesRepository(
         dao.insert(data)
     }
 
+    /**
+     * Fetches [Articles]s from database depending on their type
+     *
+     * @param type: [Article] type (e.g. "Newwswire")
+     */
     private fun fetchFromLocal(type: String): Flow<List<Article>> {
         return dao.getArticlesByType(type)
     }
 
+    /**
+     * Deletes [Article]s depending on their type
+     *
+     * @param type: [Article] type (e.g. "Newwswire")
+     */
     private suspend fun deleteArticlesFromType(type: String) {
         dao.deleteArticlesByType(type)
     }
@@ -105,6 +115,12 @@ class ArticlesRepository(
         }
     }
 
+    /**
+     * Updates a given [Article]
+     *
+     * @param article: an [Article] to update
+     * @param isBookmarked: Whether the [Article] isBookmarked field has to be 1 or 0
+     */
     suspend fun updateArticle(article: Article, isBookmarked: Boolean) {
         val articleUpdated = article.copy(isBookmarked = isBookmarked)
         dao.update(articleUpdated)
