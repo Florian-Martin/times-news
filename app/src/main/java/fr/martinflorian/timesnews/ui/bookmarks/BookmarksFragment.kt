@@ -1,13 +1,11 @@
 package fr.martinflorian.timesnews.ui.bookmarks
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import fr.martinflorian.timesnews.R
+import androidx.fragment.app.Fragment
 import fr.martinflorian.timesnews.databinding.FragmentBookmarksBinding
-import fr.martinflorian.timesnews.databinding.FragmentNewswireBinding
 
 
 class BookmarksFragment : Fragment() {

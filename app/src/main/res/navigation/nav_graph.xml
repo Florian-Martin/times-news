@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_articleDetail"
-        android:name="fr.martinflorian.timesnews.ui.ArticleDetailFragment"
+        android:name="fr.martinflorian.timesnews.ui.detail.ArticleDetailFragment"
         android:label="@string/title_article_detail"
         tools:layout="@layout/fragment_article_detail">
         <argument

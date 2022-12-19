@@ -21,7 +21,8 @@ class NewswireViewModel(application: Application) : ViewModel() {
     /**************************************
      * PROPERTIES
      *************************************/
-    private val repository = ArticlesRepository(application, AppDatabase.getAppDatabase(application))
+    private val repository =
+        ArticlesRepository(application, AppDatabase.getAppDatabase(application))
 
     private val articleType = application.resources.getString(R.string.title_newswire)
 

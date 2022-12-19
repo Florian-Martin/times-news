@@ -17,7 +17,10 @@ class BaseUtilsTests {
 
     @Test
     fun capitalizeAllFirstCharsTest() {
-        assertEquals("By Jean Michel, Jack Sparrow, Luke Skywalker", "by JEAN mICHEL, jack sparrow, luKE skywalker".capitalizeAllFirstChars())
+        assertEquals(
+            "By Jean Michel, Jack Sparrow, Luke Skywalker",
+            "by JEAN mICHEL, jack sparrow, luKE skywalker".capitalizeAllFirstChars()
+        )
         assertNotEquals("hello world", "Hello world".capitalizeFirstChar())
     }
 

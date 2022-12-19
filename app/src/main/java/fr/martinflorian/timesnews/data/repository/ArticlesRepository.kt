@@ -8,11 +8,15 @@ import fr.martinflorian.timesnews.data.remote.NYTimesApi
 import fr.martinflorian.timesnews.model.Article
 import fr.martinflorian.timesnews.utils.logDebug
 import fr.martinflorian.timesnews.utils.logError
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.withContext
 
 class ArticlesRepository(
     private val application: Application,
     database: AppDatabase,
+    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
 ) {
     /**************************************
      * PROPERTIES
@@ -93,5 +97,16 @@ class ArticlesRepository(
 
     private suspend fun deleteArticlesFromType(type: String) {
         dao.deleteArticlesByType(type)
+    }
+
+    suspend fun getArticleById(id: Int): Article {
+        return withContext(dispatcher) {
+            dao.getArticleById(id)
+        }
+    }
+
+    suspend fun updateArticle(article: Article, isBookmarked: Boolean) {
+        val articleUpdated = article.copy(isBookmarked = isBookmarked)
+        dao.update(articleUpdated)
     }
 }

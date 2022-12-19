@@ -1,6 +1,5 @@
 package fr.martinflorian.timesnews.data.local
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import fr.martinflorian.timesnews.model.*
 import kotlinx.coroutines.flow.Flow
@@ -18,7 +17,7 @@ interface ArticlesDao {
     fun getArticlesByType(type: String): Flow<List<Article>>
 
     @Query("SELECT * FROM Article WHERE id = :id")
-    fun getArticleById(id: Int): LiveData<Article>
+    fun getArticleById(id: Int): Article
 
     @Query("SELECT * FROM Article WHERE isBookmarked = 1 ORDER BY publicationDate DESC")
     fun getBookmarks(): Flow<List<Article>>
