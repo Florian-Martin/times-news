@@ -38,6 +38,18 @@ class BookmarksViewModel(private val application: Application) : ViewModel() {
         }
     }
 
+    fun deleteBookmark(bookmarkToDelete: Article) {
+        viewModelScope.launch {
+            repository.updateArticle(bookmarkToDelete, false)
+        }
+    }
+
+    fun restoreBookmark(bookmarkToRestore: Article) {
+        viewModelScope.launch {
+            repository.updateArticle(bookmarkToRestore, true)
+        }
+    }
+
 
     class Factory(private val application: Application) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {

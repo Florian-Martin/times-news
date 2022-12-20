@@ -24,5 +24,7 @@
     <string name="share_message">%s \n\n %s \n\n %s on %s \n\n Continue reading on New York Times website : \n\n %s</string>
     <string name="bookmark_added">Added to bookmarks !</string>
     <string name="bookmark_removed">Removed from bookmarks !</string>
+    <string name="delete_bookmark_snackbar_msg">Bookmark deleted !</string>
+    <string name="undo">Undo</string>
 
 </resources>
