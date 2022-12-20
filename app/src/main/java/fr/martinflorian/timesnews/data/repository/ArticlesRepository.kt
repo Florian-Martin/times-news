@@ -125,4 +125,8 @@ class ArticlesRepository(
         val articleUpdated = article.copy(isBookmarked = isBookmarked)
         dao.update(articleUpdated)
     }
+
+    fun getBookmarks(): Flow<List<Article>> {
+        return dao.getBookmarks()
+    }
 }
