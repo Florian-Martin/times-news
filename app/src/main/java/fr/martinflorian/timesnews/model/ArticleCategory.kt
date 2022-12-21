@@ -1,5 +1,5 @@
 package fr.martinflorian.timesnews.model
 
-data class ArticleCategory (
+data class ArticleCategory(
     val name: String
 )
