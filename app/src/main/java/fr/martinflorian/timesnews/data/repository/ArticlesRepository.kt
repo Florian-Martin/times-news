@@ -92,7 +92,7 @@ class ArticlesRepository(
     }
 
     /**
-     * Fetches [Articles]s from database depending on their type
+     * Fetches [Article]s from database depending on their type
      *
      * @param type: [Article] type (e.g. "Newwswire")
      */
