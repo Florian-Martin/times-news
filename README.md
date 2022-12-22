@@ -9,7 +9,7 @@ User can navigate through all kinds of articles via a BottomNavigationView.
 To ensure a better user experience, articles are cached in device's database after having been fetched from New York Times API. This means that user never faces a blank screen if he's experiencing network connection problems, as data is synchronized and loaded only from device's database.    
 
 ## Download ⬇️
-- Download latest release [here](https://github.com/Florian-Martin/todos-list/releases/download/v1.0.0/todos.apk)
+- Download latest release [here](https://github.com/Florian-Martin/times-news/releases/tag/v1.0.0/times-news.apk)
 
 ## Built with 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
