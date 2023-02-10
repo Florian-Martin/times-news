@@ -1,10 +1,9 @@
-package fr.martinflorian.timesnews.data
+package fr.martinflorian.timesnews.data.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import fr.martinflorian.timesnews.data.local.ArticlesDao
 import fr.martinflorian.timesnews.model.Article
 
 @Database(

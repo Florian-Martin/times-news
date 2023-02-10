@@ -5,7 +5,7 @@ import androidx.lifecycle.asLiveData
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import fr.martinflorian.timesnews.data.AppDatabase
+import fr.martinflorian.timesnews.data.local.AppDatabase
 import fr.martinflorian.timesnews.data.local.ArticlesDao
 import fr.martinflorian.timesnews.model.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi

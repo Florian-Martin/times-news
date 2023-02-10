@@ -2,7 +2,7 @@ package fr.martinflorian.timesnews.data.repository
 
 import android.app.Application
 import fr.martinflorian.timesnews.R
-import fr.martinflorian.timesnews.data.AppDatabase
+import fr.martinflorian.timesnews.data.local.AppDatabase
 import fr.martinflorian.timesnews.data.Resource
 import fr.martinflorian.timesnews.data.remote.NYTimesApi
 import fr.martinflorian.timesnews.model.Article

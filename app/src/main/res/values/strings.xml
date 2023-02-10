@@ -25,5 +25,7 @@
     <string name="bookmark_removed">Removed from bookmarks !</string>
     <string name="delete_bookmark_snackbar_msg">Bookmark deleted !</string>
     <string name="undo">Undo</string>
+    <string name="no_connection">No network connection :(</string>
+    <string name="connection_back">You\'re connected again !</string>
 
 </resources>

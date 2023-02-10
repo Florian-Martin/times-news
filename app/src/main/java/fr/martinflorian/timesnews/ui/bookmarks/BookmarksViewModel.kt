@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
-import fr.martinflorian.timesnews.data.AppDatabase
+import fr.martinflorian.timesnews.data.local.AppDatabase
 import fr.martinflorian.timesnews.data.Resource
 import fr.martinflorian.timesnews.data.Resource.Companion.toState
 import fr.martinflorian.timesnews.data.State

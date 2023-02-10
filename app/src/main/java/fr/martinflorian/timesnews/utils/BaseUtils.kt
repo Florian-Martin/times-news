@@ -1,10 +1,15 @@
 package fr.martinflorian.timesnews.utils
 
+import android.app.Activity
 import android.content.Context
 import android.util.Log
 import android.view.View
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.ColorRes
+import androidx.annotation.DrawableRes
+import androidx.core.content.ContextCompat
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import java.text.SimpleDateFormat
 import java.util.*
@@ -91,3 +96,9 @@ fun showLoadingSpinners(spinner: SwipeRefreshLayout, imageView: ImageView, isSho
     showSwipeToRefreshSpinner(spinner, isShown)
     showView(imageView, false)
 }
+
+fun TextView.setDrawableLeft(@DrawableRes id: Int = 0) {
+    this.setCompoundDrawablesWithIntrinsicBounds(id, 0, 0, 0)
+}
+
+fun Activity.getColorRes(@ColorRes id: Int) = ContextCompat.getColor(applicationContext, id)

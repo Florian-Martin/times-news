@@ -10,4 +10,5 @@
     <dimen name="margin">16dp</dimen>
     <dimen name="heading">20sp</dimen>
     <dimen name="app_logo">200dp</dimen>
+    <dimen name="padding_half">8dp</dimen>
 </resources>

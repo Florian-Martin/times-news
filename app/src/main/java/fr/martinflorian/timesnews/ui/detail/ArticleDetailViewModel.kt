@@ -2,7 +2,7 @@ package fr.martinflorian.timesnews.ui.detail
 
 import android.app.Application
 import androidx.lifecycle.*
-import fr.martinflorian.timesnews.data.AppDatabase
+import fr.martinflorian.timesnews.data.local.AppDatabase
 import fr.martinflorian.timesnews.data.repository.ArticlesRepository
 import fr.martinflorian.timesnews.model.Article
 import kotlinx.coroutines.launch
